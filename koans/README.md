@@ -1,16 +1,26 @@
-[![official JetBrains project](http://jb.gg/badges/official-plastic.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+# Introduction course in Kotlin
 
-Kotlin Koans
-===========
+Welcome to Kotlin workshop with Itera. We are in this workshop going to use the Kotlin Koans learning framework to help you learn Kotlin. You can either clone this repository, install the EduTools plugin in IntelliJ or solve the Koans online: http://try.kotl.in/. We recommend to clone this repo or use the EduTools plugin. See below for further instructions on installations and use, no instructions are provided for the Online editor.
 
-Kotlin Koans Workshop is a series of exercises to get you familiar with the Kotlin Syntax. 
-Each exercise is created as a failing unit test and your job is to make it pass. 
+Kotlin Koans is a series of exercises made by JetBrains to teach developers Kotlin syntax. In Itera we believe in using open sourced learning materials and decided therefore to use Kotlin koans in this workshop, why invent the wheel if it already exists as we say in Norway.
 
-#### How to build and run tests
+Select your prefered way of solving the Koans:
+
+## Using plugin
+
+1. Open IntelliJ IDEA and press `⌘,` to open the `Settings | Preferences` dialog and then go to Plugins.
+
+2. Search for EduTools and install it.
+
+3. Click OK in the dialog and restart IntelliJ IDEA.
+
+## Cloning this repo
+
+1. Clone this repository with `git clone https://github.com/Itera/kotlin-v19.git` from a terminal in your desired folder.
 
 ##### Working with the project using Intellij IDEA:
 
-1. Import the project as Gradle project.
+1. Import this project as Gradle project.
 2. To build the project and run the tests use `test` task on the Gradle tool window 
 (`View | Tool Windows | Gradle`). 
 
@@ -32,13 +42,6 @@ $ ./gradlew test --tests i_*          # run tests in part 1
 $ ./gradlew test --tests ii_*         # run tests in part 2
 $ ./gradlew test --tests ii_*22*      # run test number 22 in part 2
 ```
-
-
-#### How to check yourself
-
-The repository has two branches, `master` which contains the exercises for you to do and `resolutions` which contains the resolved exercises. 
-Make sure you don’t cheat!
-
 
 #### How the tasks are organized
  
@@ -73,13 +76,3 @@ The `resolutions` branch contains all the solutions.
 It's a good idea to check the proposed solution after completing each task.
 Open the file with your solution, call the `Compare with branch...` action and choose the `resolutions` branch.   
 You can find [here](https://www.jetbrains.com/help/idea/navigating-to-action.html) how to call an action.
-
-
-#### Other ways to solve Koans
-
-You can solve the similar tasks using Educational Plugin or in the browser:
-
-- EduTools Plugin https://www.jetbrains.com/help/education/learner-start-guide.html?section=Kotlin%20Koans
-- online version of koans http://try.kotl.in
-
-The koans tasks for web-demo and educational plugin can be found here: https://github.com/Kotlin/kotlin-koans-edu
