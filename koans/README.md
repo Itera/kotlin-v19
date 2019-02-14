@@ -18,7 +18,7 @@ Select your prefered way of solving the Koans:
 
 1. Clone this repository with `git clone https://github.com/Itera/kotlin-v19.git` from a terminal in your desired folder.
 
-##### Working with the project using Intellij IDEA:
+### Working with the project using Intellij IDEA:
 
 1. Import this project as Gradle project.
 2. To build the project and run the tests use `test` task on the Gradle tool window 
@@ -29,7 +29,7 @@ how to run Gradle task from the Gradle toolbar in IntelliJ IDEA.
 
 Note that this project isn't intended to be used in Android Studio. If you want to solve koans in Android Studio, check the course in Android Studio with EduTools plugin installed https://github.com/kotlin/kotlin-koans#other-ways-to-solve-koans.
 
-##### Working with the commandline
+### Working with the commandline
 
 You can also build the project and run all tests in the terminal:
 ```
@@ -43,7 +43,7 @@ $ ./gradlew test --tests ii_*         # run tests in part 2
 $ ./gradlew test --tests ii_*22*      # run test number 22 in part 2
 ```
 
-#### How the tasks are organized
+## How the tasks are organized
  
 You have 42 tasks to do. 
 Each task lives in its own function: from `task0` to `task41`.
@@ -71,8 +71,3 @@ with the correct, meaningful code in order to solve the problem and allow the as
 ```kotlin
 fun task0() = "OK"
 ```
-
-The `resolutions` branch contains all the solutions.
-It's a good idea to check the proposed solution after completing each task.
-Open the file with your solution, call the `Compare with branch...` action and choose the `resolutions` branch.   
-You can find [here](https://www.jetbrains.com/help/idea/navigating-to-action.html) how to call an action.
