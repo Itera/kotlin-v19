@@ -5,6 +5,7 @@ import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.application.log
+import io.ktor.features.CORS
 import io.ktor.features.CallLogging
 import io.ktor.features.ContentNegotiation
 import io.ktor.http.ContentType
@@ -30,88 +31,74 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
-
-
     install(ContentNegotiation) {
         jackson {
             enable(SerializationFeature.INDENT_OUTPUT)
         }
     }
     install(CallLogging)
-
-    Database.connect("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1", driver = "org.h2.Driver")
-    transaction {
-        SchemaUtils.create(Comments)
-        addLogger(StdOutSqlLogger)
-
-        val id = Comments.insert {
-            it[content] = "howdy"
-        } get Comments.id
-        log.info("Inserted comment with id=$id")
+    install(CORS) {
+        anyHost()
     }
+
+    initDb()
 
     routing {
         get("/") {
             call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
         }
 
-        get("/comment") {
+        get("/comments") {
             call.respond(getComments())
         }
 
-        get("/comment/{id}") {
-            val id = call.parameters["id"]?.toInt() ?: return@get call.respond(
-                HttpStatusCode.BadRequest,
-                "A numeric id must be specified"
-            )
+        get("/comments/{id}") {
+            val id = call.parameters["id"]?.toInt() ?: return@get call.respond(HttpStatusCode.BadRequest)
             val comment = getComment(id) ?: return@get call.respond(HttpStatusCode.NotFound)
-            log.info(comment.toString())
             call.respond(comment)
         }
 
-        post("/comment") {
-            val addedComment = addComment(call.receive())
+        get("/posts/{id}/comments") {
+            val postId = call.parameters["id"]?.toInt() ?: return@get call.respond(HttpStatusCode.BadRequest)
+            call.respond(getCommentsForPost(postId))
+        }
+
+        post("/posts/{id}/comments") {
+            val postId = call.parameters["id"]?.toInt() ?: return@post call.respond(HttpStatusCode.BadRequest)
+            val addedComment = addComment(postId, call.receive())
             call.respond(HttpStatusCode.Created, addedComment)
         }
     }
 }
 
-object Comments : Table() {
-    val id = integer("id").autoIncrement().primaryKey()
-    val content = varchar("content", 1024).index()
-}
-
-
 data class Comment(
     val id: Int? = null,
-    val content: String
+    val postId: Int? = null,
+    val name: String,
+    val email: String,
+    val body: String
 )
 
-suspend fun getComments() = withContext(Dispatchers.IO) {
-    transaction {
-        Comments.selectAll().mapNotNull { toComment(it) }
-    }
+suspend fun getComments(): List<Comment> = dbQuery {
+    Comments.selectAll().mapNotNull(ResultRow::toComment)
 }
 
-suspend fun getComment(id: Int): Comment? = withContext(Dispatchers.IO) {
-    transaction {
-        Comments.select { Comments.id eq id }.mapNotNull { toComment(it) }.singleOrNull()
-    }
+suspend fun getComment(id: Int): Comment? = dbQuery {
+    Comments.select { Comments.id eq id }.mapNotNull(ResultRow::toComment).singleOrNull()
 }
 
-suspend fun addComment(comment: Comment): Comment {
-    var id: Int? = null
-    withContext(Dispatchers.IO) {
-        transaction {
-            id = Comments.insert { it[content] = comment.content } get Comments.id
-        }
+suspend fun getCommentsForPost(postId: Int): List<Comment> = dbQuery {
+    Comments.select { Comments.postId eq postId }.mapNotNull(ResultRow::toComment)
+}
+
+suspend fun addComment(postId: Int, comment: Comment): Comment {
+    val id: Int? = dbQuery {
+        Comments.insert {
+            it[Comments.postId] = postId
+            it[Comments.name] = comment.name
+            it[Comments.email] = comment.email
+            it[Comments.body] = comment.body
+        } get Comments.id
     }
     return getComment(id!!)!!
-}
-
-fun toComment(row: ResultRow): Comment {
-    return Comment(
-        id = row[Comments.id],
-        content = row[Comments.content]
-    )
 }
