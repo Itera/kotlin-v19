@@ -1,6 +1,6 @@
-# Introduction course in Kotlin
+# Learning Kotlin using Kotlin Koans
 
-Welcome to Kotlin workshop with Itera. We are in this workshop going to use the Kotlin Koans learning framework to help you learn Kotlin. You can either clone this repository, install the EduTools plugin in IntelliJ or solve the Koans online: http://try.kotl.in/. We recommend to clone this repo or use the EduTools plugin. See below for further instructions on installations and use, no instructions are provided for the Online editor.
+We are in this workshop going to use the Kotlin Koans learning framework to help you learn Kotlin. You can either clone this repository, install the EduTools plugin in IntelliJ or solve the Koans online: http://try.kotl.in/. We recommend to use the EduTools plugin or the online editor but you can also clone this repo and run Gradle to solve the tasks. See below for further instructions on installations and use, no instructions are provided for the Online editor.
 
 Kotlin Koans is a series of exercises made by JetBrains to teach developers Kotlin syntax. In Itera we believe in using open sourced learning materials and decided therefore to use Kotlin koans in this workshop, why invent the wheel if it already exists as we say in Norway.
 
@@ -8,11 +8,15 @@ Select your prefered way of solving the Koans:
 
 ## Using plugin
 
-1. Open IntelliJ IDEA and press `⌘,` to open the `Settings | Preferences` dialog and then go to Plugins.
+1. Open IntelliJ IDEA and press `⌘,` on macOS or `Ctrl+Alt+S` on windows/linux to open the `Settings | Preferences` dialog and then go to Plugins.
 
 2. Search for EduTools and install it.
 
 3. Click OK in the dialog and restart IntelliJ IDEA.
+
+4. Select Join on Kotlin Koans from the `Learn | Browse courses` menu
+
+When running the plugin you will be presented with the task list, a code editor and a description for the selected task. In order to solve the tasks you are generelly required to replace the function body to produce desired results and make the associated unit tests run succesfully. You can run and check the task by clicking the `Check` button under the task description. 
 
 ## Cloning this repo
 
