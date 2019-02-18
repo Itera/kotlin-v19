@@ -1,8 +1,8 @@
 # Learning Kotlin using Kotlin Koans
 
-We are in this workshop going to use the Kotlin Koans learning framework to help you learn Kotlin. You can either clone this repository, install the EduTools plugin in IntelliJ or solve the Koans online: http://try.kotl.in/. We recommend to use the EduTools plugin or the online editor but you can also clone this repo and run Gradle to solve the tasks. See below for further instructions on installations and use, no instructions are provided for the Online editor.
+We are in this workshop going to use the Kotlin Koans learning framework to help you learn Kotlin. Kotlin Koans is a series of exercises made by JetBrains to teach developers Kotlin syntax. In Itera we believe in using open sourced learning materials and decided therefore to use Kotlin koans in this workshop, why invent the wheel if it already exists as we say in Norway.
 
-Kotlin Koans is a series of exercises made by JetBrains to teach developers Kotlin syntax. In Itera we believe in using open sourced learning materials and decided therefore to use Kotlin koans in this workshop, why invent the wheel if it already exists as we say in Norway.
+You can either solve the Koans online: https://play.kotlinlang.org/koans, install the EduTools plugin in IntelliJ or clone this repository. We recommend you to use the EduTools plugin for the full IDE features or use the online editor. However, you can also clone this repo and run Gradle to solve the tasks. See below for further instructions on installations and use, no instructions are provided for the Online editor.
 
 Select your prefered way of solving the Koans:
 
