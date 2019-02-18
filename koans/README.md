@@ -18,18 +18,16 @@ Select your prefered way of solving the Koans:
 
 When running the plugin you will be presented with the task list, a code editor and a description for the selected task. In order to solve the tasks you are generelly required to replace the function body to produce desired results and make the associated unit tests run succesfully. You can run and check the task by clicking the `Check` button under the task description.
 
-In the first example, to solve the tasks means replacing the code
+In the first example, to solve the tasks means replacing the `TODO()` part of the code
 
 ```kotlin
-fun task0(): String {
-    return todoTask0()
-}
+fun start(): String = TODO()
 ```
 
 with the correct, meaningful code to solve the problem and allow the associated unit test to pass, such as:
 
 ```kotlin
-fun task0() = "OK"
+fun start(): String = "OK"
 ```
 
 ## Cloning this repo
