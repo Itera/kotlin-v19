@@ -10,13 +10,27 @@ Select your prefered way of solving the Koans:
 
 1. Open IntelliJ IDEA and press `⌘,` on macOS or `Ctrl+Alt+S` on windows/linux to open the `Settings | Preferences` dialog and then go to Plugins.
 
-2. Search for EduTools and install it.
+2. Search for the EduTools plugin and install it.
 
 3. Click OK in the dialog and restart IntelliJ IDEA.
 
 4. Select Join on Kotlin Koans from the `Learn | Browse courses` menu
 
-When running the plugin you will be presented with the task list, a code editor and a description for the selected task. In order to solve the tasks you are generelly required to replace the function body to produce desired results and make the associated unit tests run succesfully. You can run and check the task by clicking the `Check` button under the task description. 
+When running the plugin you will be presented with the task list, a code editor and a description for the selected task. In order to solve the tasks you are generelly required to replace the function body to produce desired results and make the associated unit tests run succesfully. You can run and check the task by clicking the `Check` button under the task description.
+
+In the first example, to solve the tasks means replacing the code
+
+```kotlin
+fun task0(): String {
+    return todoTask0()
+}
+```
+
+with the correct, meaningful code to solve the problem and allow the associated unit test to pass, such as:
+
+```kotlin
+fun task0() = "OK"
+```
 
 ## Cloning this repo
 
@@ -30,8 +44,6 @@ When running the plugin you will be presented with the task list, a code editor 
 
 Here https://www.jetbrains.com/help/idea/gradle.html#gradle_tasks you can read 
 how to run Gradle task from the Gradle toolbar in IntelliJ IDEA.
-
-Note that this project isn't intended to be used in Android Studio. If you want to solve koans in Android Studio, check the course in Android Studio with EduTools plugin installed https://github.com/kotlin/kotlin-koans#other-ways-to-solve-koans.
 
 ### Working with the commandline
 
@@ -55,23 +67,4 @@ For each task, there is an associated unit test that checks your solution.
  
 You may navigate to the corresponding test automatically when you read the task.
 Open the source file with the task and use the action `Navigate -> Test` to open the test file. 
-You may also use `Navigate -> Test Subject` for reversed navigation.
-
-Individual tasks generally require you to change the function `taskX` by completely replacing the body of the function.
-Your goal is to solve the problem and allow the associated unit test to pass. 
-If you run the unit test for a task that is not correct, the unit test results will be displayed. 
-If you have not yet made any changes to a task, the exception will be thrown and the task's TODO message will be displayed. 
-
-In the first example, this means replacing the code
-
-```kotlin
-fun task0(): String {
-    return todoTask0()
-}
-```
-
-with the correct, meaningful code in order to solve the problem and allow the associated unit test to pass, such as:
-
-```kotlin
-fun task0() = "OK"
-```
+You may also use `Navigate -> Test Subject` for reversed navigation. 
