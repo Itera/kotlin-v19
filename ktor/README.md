@@ -1,7 +1,7 @@
 ktor
 ===
 
-This folder contains a small example of a web application written in kotlin using Ktor, a asynchronous Web framework.
+This folder contains a small example of a web application written in kotlin using Ktor, an asynchronous Web framework.
 The web application is a simple Rest API for managing comments on posts. 
 For storage the application uses H2, an in-memory database. 
 Since the application is in-memory the data is wiped and reinitialized when the application restarts. 
@@ -41,7 +41,7 @@ There are two kotlin files in the project.
 Application.kt contains main parts of the web application. 
 - The installation and configuration of some necessary features. 
 - The definition of the different routes and their handlers.
-- The Comment data class which is the object used over the api
+- The Comment data class which is the object used for the API
 - Service methods for data access.
  
 ### db.kt
@@ -54,5 +54,5 @@ Contains all the database initialization logic.
 
 ## Notes
 
-The example is simple with a most of the logic in a single file. The example is meant to demonstrate that Kotlin with Ktor 
-provides a concise way to create a simple web application.
+The example is simple with most of the logic in a single file. 
+The example is meant to demonstrate that Kotlin with Ktor provides a concise way to create a simple web application.
