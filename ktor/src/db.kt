@@ -32,9 +32,9 @@ fun initDb() {
 
         Comments.insert {
             it[postId] = 1
-            it[name] = "id labore ex et quam laborum"
-            it[email] = "Eliseo@gardner.biz"
-            it[body] = "laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium"
+            it[name] = "Hilsen fra Itera"
+            it[email] = "kontakt@itera.no"
+            it[body] = "Vi håper du har lært litt, og fått smaken på Kotlin!"
         }
         Comments.insert {
             it[postId] = 1
