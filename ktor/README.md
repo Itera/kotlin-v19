@@ -8,17 +8,20 @@ Since the application is in-memory the data is wiped and reinitialized when the 
 
 ## Getting started
 
-For simplicity this project is intended to be opened, built and executed within IntelliJ.
-Select `file -> open` and navigate to this folder (ktor). 
-Once the project is open, open the file src/Application.kt, to the left of the main method there is a play symbol.
-Click the symbol and select the first option "Run". 
-Once you see something like in the Run window 
+For simplicity this project is intended to be opened, built and executed within IntelliJ:
+1. Select `file -> open` and navigate to this folder (ktor).
+2. Open the project and wait for it to load
+3. Open the file src/Application.kt, to the left of the main method there is a play symbol :arrow_forward:.
+Click the symbol and select the first option "Run".  
+
+When you see something like this in the Run window 
 
 ```
 [main] TRACE Application - Application started: io.ktor.application.Application
 ```
 the application has started.
-To check if the Application is running open http://0.0.0.0:8080/ in your favorite browser.
+
+Check that the Application is running by opening this url: http://0.0.0.0:8080/ in your favorite browser.
 
 ## REST API Overview
 
