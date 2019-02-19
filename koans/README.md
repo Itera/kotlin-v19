@@ -1,14 +1,17 @@
 # Learning Kotlin using Kotlin Koans
 
-We are in this workshop going to use the Kotlin Koans learning framework to help you learn Kotlin. Kotlin Koans is a series of exercises made by JetBrains to teach developers Kotlin syntax. In Itera we believe in using open sourced learning materials and decided therefore to use Kotlin koans in this workshop, why invent the wheel if it already exists as we say in Norway.
+We are in this workshop going to use the Kotlin Koans learning framework to help you learn Kotlin. Kotlin Koans is a series of exercises made by JetBrains to teach developers Kotlin syntax. Can you solve them all? :trophy: In Itera we believe in using open sourced learning materials and decided therefore to use Kotlin koans in this workshop, why invent the wheel if it already exists as we say in Norway :wink:.
 
-You can either solve the Koans online: https://play.kotlinlang.org/koans, install the EduTools plugin in IntelliJ or clone this repository. We recommend you to use the EduTools plugin for the full IDE features or use the online editor. However, you can also clone this repo and run Gradle to solve the tasks. See below for further instructions on installations and use, no instructions are provided for the Online editor.
+Choose your preferred way of solving the Koans:
+- Solve the Koans online: https://play.kotlinlang.org/koans  
+- Install the EduTools plugin in IntelliJ (:heavy_check_mark: Recommended) 
+- Clone this repository and use Gradle
 
-Select your prefered way of solving the Koans:
+We recommend you to use the EduTools plugin for the full IDE features or use the online editor. However, you can also clone this repo and run Gradle to solve the tasks. See below for further instructions on installations and use, no instructions are provided for the Online editor.
 
 ## Using plugin
 
-1. Open IntelliJ IDEA and press `⌘,` on macOS or `Ctrl+Alt+S` on windows/linux to open the `Settings | Preferences` dialog and then go to Plugins.
+1. Open IntelliJ IDEA and press `⌘+,` on macOS or `Ctrl+Alt+S` on windows/linux to open the `Settings | Preferences` dialog and then go to Plugins.
 
 2. Search for the EduTools plugin and install it.
 
