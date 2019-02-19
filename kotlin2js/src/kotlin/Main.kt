@@ -3,7 +3,10 @@ import org.w3c.xhr.XMLHttpRequest
 import kotlin.browser.document
 import kotlin.js.JSON
 
-val MY_API = "http://localhost:8080/comments"
+val MY_API = "https://jsonplaceholder.typicode.com/comments"
+
+// Uncomment if you have the ktor project running to fetch local comments
+// val MY_API = "http://localhost:8080/comments"
 
 fun getAsync(url: String, callback: (String) -> Unit) {
   val xmlHttp = XMLHttpRequest()
