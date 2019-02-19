@@ -3,7 +3,7 @@ import org.w3c.xhr.XMLHttpRequest
 import kotlin.browser.document
 import kotlin.js.JSON
 
-val MY_API = "https://jsonplaceholder.typicode.com/comments"
+val MY_API = "http://localhost:8080/comments"
 
 fun getAsync(url: String, callback: (String) -> Unit) {
   val xmlHttp = XMLHttpRequest()
