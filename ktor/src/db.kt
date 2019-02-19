@@ -14,16 +14,6 @@ object Comments : Table() {
     val body = varchar("body", 1024)
 }
 
-fun ResultRow.toComment(): Comment {
-    return Comment(
-        id = this[Comments.id],
-        postId = this[Comments.postId],
-        name = this[Comments.name],
-        email = this[Comments.email],
-        body = this[Comments.body]
-    )
-}
-
 fun initDb() {
     Database.connect("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1", driver = "org.h2.Driver")
     transaction {

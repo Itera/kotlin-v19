@@ -18,6 +18,7 @@ import io.ktor.routing.get
 import io.ktor.routing.post
 import io.ktor.routing.routing
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
@@ -78,6 +79,16 @@ data class Comment(
     val email: String,
     val body: String
 )
+
+fun ResultRow.toComment(): Comment {
+    return Comment(
+        id = this[Comments.id],
+        postId = this[Comments.postId],
+        name = this[Comments.name],
+        email = this[Comments.email],
+        body = this[Comments.body]
+    )
+}
 
 suspend fun getComments(): List<Comment> = dbQuery {
     Comments.selectAll().mapNotNull(ResultRow::toComment)
