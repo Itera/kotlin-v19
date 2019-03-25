@@ -1,36 +1,55 @@
-# Itera Kotlin Workshop
+# Intro to Kotlin with Itera!
 
-Welcome to our workshop in Kotlin 🙌. In this course you will learn the basics of the Kotlin programmering language. The main tasks of the course will be to solve Kotlin Koans, you can find these in the `Koans` folder with further instructions on how to set it up in the readme. 
+Welcome to our workshop on Kotlin 🙌. In this course you will learn the basics of the Kotlin programming language. The main objective of the course will be to solve Kotlin Koans, a series of exercises developed by the authors of Kotlin to get you familiar with the Kotlin syntax. Later, we will show you some more advanced examples of how you can implement a simple web framework in Kotlin using Ktor, and also how to compile Kotlin into JavaScript.
 
-We have also set up two different projects you can play with as examples of more advenced use of Kotlin. The Ktor project shows how to implement a simple web framework in Ktor and the Kotlin2js project is an example of compiling Kotlin to Javascript. These projects are found in their respective folders. 
+💡 We encourage everyone to ask questions if you are stuck or need any help during the workshop. Raise your hand and we will come running!
 
-❓Feel free to ask us any questions if you are stuck or need any help during the workshop, raise your hand and we will come running. 
+## Getting started ✅
 
-## Getting started
+- Make sure that you have IntelliJ IDEA installed, either the Community or Ultimate edition. If not, you can install it on the [JetBrains website]( https://www.jetbrains.com/idea/).
+- After installing and launching IntelliJ, open the Settings / Preferences Dialog choosing `File | Settings` for Windows and Linux or `IntelliJ IDEA | Preferences` for macOS.
+- Select `Plugins` and search for EduTools. Install this plugin, and restart IntelliJ when finished. Select `Learner` if asked whether you're a Learner or an Educator.
+- When you open IntelliJ again, you should have the option of selecting `Learn` in addition to Create or Open a project. Select `Browse courses`, and join the `Kotlin Koans` course.
 
-- ✅ Make sure that you have IntelliJ IDEA installed, either the Community or Ultimate edition. If not you can install it here: https://www.jetbrains.com/idea/
-- ✅ Go into the `Koans`folder and follow the readme instructions on how to get started solving the Koans. 
+![IntelliJ options](https://imgur.com/k58Iyto)
 
-If you get tired of the Koans you can always look into either the Ktor project or Kotlin2js to see different uses of Kotlin. 
+Now you're ready to start programming!
 
-## Project descriptions
+❓ Are you having trouble with the installation? You can also solve Kotlin Koans in [an online editor](https://play.kotlinlang.org/koans). However, we strongly recommend that you ask us for help first!
 
-### Koans
-The main starting point of this workshop. Here you can find the instructions for solving Koans. 
+## Kotlin Koans
+
+Kotlin Koans consist of six different sets of exercises:
+- Introduction
+- Conventions
+- Collections
+- Properties
+- Builders
+- Generics
+
+Every exercise comes with a task description. Usually this description will point you in the direction of the documentation relevant for the specific exercise. You can also see the [official Kotlin documentation](https://kotlinlang.org/docs/reference/) for reference.
+
+Fill in all of the parts of the code marked with `TODO()` and select `Check` when you think you're finished (or `Run` in the online editor). Note that the first time you check a solution it may take a while. The plugin will tell you whether your code is correct or not. Remember that if you're having trouble getting a correct solution, you should always ask us for help before cheating and selecting `Peek Solution`!!! 😉
+
+Happy coding! 👨‍💻👩‍💻
+
+❓ If you finish early, please ask us for more alternatives!
+
+## Other Kotlin Features
+
+Following is a description of the example Kotlin projects included in this repository. They will be introduced at a later part of the workshop.
 
 ### Ktor
-Ktor contains an example of a simple web framework implemented in Ktor. See readme in the folder for more details. 
+Ktor contains an example of a simple web framework implemented in Ktor. See readme in the folder for more details.
 
 ### Kotlin2js
 
 Kotlin2js contains an example of how Kotlin can be compiled to Javascript, and thus be executed in a web browser, or in a  Node.js runtime. See the readme in the folder for more information.
 
 ## Resources
-If you need some more resources for learning Kotlin we have a few recommended sites:
-- Kotlin official documentation: https://kotlinlang.org/docs/reference/
-- Kotlin Community site: https://kotlinlang.org/community/
-- Kotlin podcast: http://talkingkotlin.com/
-- Kotlin forum: https://discuss.kotlinlang.org/
-- Stack Overflow: https://stackoverflow.com/questions/tagged/kotlin
-
-
+If you are interested in some more resources for learning Kotlin. we have a few recommendations:
+- [Kotlin official documentation](https://kotlinlang.org/docs/reference/)
+- [Kotlin Community site](https://kotlinlang.org/community/)
+- [Kotlin podcast](http://talkingkotlin.com/)
+- [Kotlin forum](https://discuss.kotlinlang.org/)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/kotlin)
