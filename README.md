@@ -11,7 +11,7 @@ Welcome to our workshop on Kotlin 🙌. In this course you will learn the basics
 - Select `Plugins` and search for EduTools. Install this plugin, and restart IntelliJ when finished. Select `Learner` if asked whether you're a Learner or an Educator.
 - When you open IntelliJ again, you should have the option of selecting `Learn` in addition to Create or Open a project. Select `Browse courses`, and join the `Kotlin Koans` course.
 
-![IntelliJ options](https://imgur.com/k58Iyto)
+![IntelliJ options](https://i.ibb.co/rfMdyXp/Screenshot-2019-03-25-at-21-13-39.png)
 
 Now you're ready to start programming!
 
