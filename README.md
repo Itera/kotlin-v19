@@ -35,9 +35,9 @@ Happy coding! 👨‍💻👩‍💻
 
 ❓ If you finish early, please ask us for more alternatives!
 
-## Advanced Kotlin
+## Other Kotlin Features
 
-Following is a description of the other Kotlin projects included in this repository. They will be introduced at a later part of the workshop.
+Following is a description of the example Kotlin projects included in this repository. They will be introduced at a later part of the workshop.
 
 ### Ktor
 Ktor contains an example of a simple web framework implemented in Ktor. See readme in the folder for more details.
